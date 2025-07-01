@@ -1,6 +1,44 @@
 # Projeto Roadmap de Cybersegurança: Do Iniciante ao Profissional
 
 ---
+# Setup-Debian-Server
+
+Este repositório automatiza a configuração de um ambiente Debian para uso como Home Lab focado em segurança, usando Docker para criar um ambiente controlado.
+
+---
+
+## Objetivo
+
+Fornecer scripts para preparar um laboratório Debian com as ferramentas necessárias para estudos, simulações e testes, seguindo um roadmap de aprendizado.
+
+---
+
+## Estrutura do Repositório
+
+- `1.1.Setup.sh`: Script para instalar pré-requisitos (Git, Docker, Docker Compose), clonar o projeto, criar Dockerfile e docker-compose.yml, e iniciar o container.
+- `1.2.ip_lookup2.sh`: Script para consultar informações WHOIS e geolocalização de IPs fornecidos como parâmetro.
+- Outros scripts (futuros) serão organizados conforme roadmap.
+
+---
+
+## Pré-requisitos
+
+- Sistema Debian ou derivado (Ubuntu, etc).
+- Acesso sudo para instalação de pacotes.
+- Conexão com internet.
+
+---
+
+## Como usar
+
+1. Clone este repositório ou baixe os scripts.
+2. Execute o script de setup:
+
+```bash
+chmod +x 1.1.Setup.sh
+./1.1.Setup.sh
+
+
 
 ## Sumário
 
