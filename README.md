@@ -1,51 +1,55 @@
-<h1>🛡️ Debian Server Hardening & Best Practices</h1>
+<h1>🛡️ README - Laboratório de Segurança de Rede com Debian Gateways</h1>
 
-<p>This repository is a practical guide and a resource collection for securing and optimizing Debian servers. Here, you'll find hardening best practices, essential security configurations, and strategies to protect your servers against common threats.</p>
+Objetivo Geral
+--------------
 
-<p>Our goal is to provide clear steps and reusable scripts to ensure your Debian servers are configured with maximum security and resilience—whether for personal use, development, or production environments.</p>
+Este laboratório tem como foco a criação de um ambiente seguro e controlado para aprendizado e testes de segurança em redes. Vamos montar um host Debian que atua como gateway e firewall, rodando ferramentas como IPTables, Suricata, Squid, ClamAV e Pi-hole. A partir de um notebook de testes, vamos simular ataques e monitorar os logs gerados, entendendo cada passo.
 
-<h2>🎯 What You'll Find Here</h2>
+Sumário
+=======
 
-<h3>🔐 Secure SSH Configurations</h3>
-<ul>
-  <li>Instructions for setting up SSH following best practices, including key-based authentication, disabling root login, using non-standard ports, and limiting login attempts.</li>
-  <li>Example <code>sshd_config</code> files and automation scripts.</li>
-</ul>
+-   Níveis de Evolução
+    
+-   Fase 1 – Exploração Fácil (Semanas 1-2)
+    
+-   Fase 2 – Análise Intermediária (Semanas 3-5)
+    
+-   Fase 3 – Pentest & Monitoramento Profissional (Semanas 6-8)
+    
+-   Dicas Gerais
+    
+-   Próximos Passos
+    
 
-<h3>👥 User & Permission Management</h3>
-<ul>
-  <li>Guidelines for secure user creation and management.</li>
-  <li>Using <code>sudo</code> for privileged access and configuring file and directory permissions (<code>chmod</code>, <code>chown</code>).</li>
-  <li>Strategies to restrict access to critical resources.</li>
-</ul>
+Níveis de Evolução
+------------------
 
-<h3>🔥 Firewall (UFW / nftables)</h3>
-<ul>
-  <li>Example firewall rules using UFW (Uncomplicated Firewall) to simplify configuration.</li>
-  <li>Advanced setups with <code>nftables</code> for specific scenarios like service isolation or basic DDoS protection.</li>
-</ul>
+Nível
 
-<h3>📝 Log Auditing & Monitoring (auditd / rsyslog)</h3>
-<ul>
-  <li>Configuration of <code>auditd</code> to audit key system events.</li>
-  <li>Optimizing <code>rsyslog</code> for log collection and rotation.</li>
-  <li>Tips for setting up alerts and integrating with basic SIEM (Security Information and Event Management) tools.</li>
-</ul>
+O que você aprende e faz
 
-<h3>🔄 Security Updates & Maintenance</h3>
-<ul>
-  <li>Strategies for keeping the system and packages up to date automatically or on a schedule (e.g., <code>unattended-upgrades</code>).</li>
-  <li>Best practices for package management and removing unnecessary software.</li>
-</ul>
+Ferramentas chave
 
-<h3>🧰 Additional Hardening Tools</h3>
-<ul>
-  <li>Documentation on installing and using tools like <strong>Fail2Ban</strong> to mitigate brute-force attacks.</li>
-  <li><strong>Lynis</strong> for automated security auditing and <strong>chkrootkit</strong>/<strong>rkhunter</strong> for rootkit detection.</li>
-</ul>
+Iniciante
 
-<h3>📚 Detailed Documentation</h3>
-<ul>
-  <li>Clear and concise step-by-step tutorials for each security measure, helping you implement configurations with confidence.</li>
-  <li>Explanations of the security principles behind each recommendation.</li>
-</ul>
+Mapear rede, identificar hosts, executar comandos básicos
+
+nmap, whois, geoiplookup, LocalTunnel
+
+Júnior
+
+Monitorar tráfego, configurar IDS/IPS, logs básicos
+
+Suricata, IPTables, Squid, multitail
+
+Pleno
+
+Realizar pentests, simular phishing, analisar pacotes
+
+OpenVAS, SET, tcpdump, Wireshark, Nuclei
+
+Sênior
+
+Automatizar, criar dashboards, integração e alertas
+
+ELK Stack, Grafana, playbooks, APIs
