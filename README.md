@@ -21,17 +21,6 @@ Fornecer scripts para preparar um laboratório Debian com as ferramentas necess�
 
 ---
 
-## Como usar
-
-1. Clone este repositório ou baixe os scripts.
-2. Execute o script de setup:
-
-```bash
-chmod +x 1.1.Setup.sh
-./1.1.Setup.sh
-
----
-
 ## Sumário
 
 - Níveis de Evolução  
