@@ -13,14 +13,6 @@ Fornecer scripts para preparar um laboratório Debian com as ferramentas necess�
 
 ---
 
-## Estrutura do Repositório
-
-- `1.1.Setup.sh`: Script para instalar pré-requisitos (Git, Docker, Docker Compose), clonar o projeto, criar Dockerfile e docker-compose.yml, e iniciar o container.
-- `1.2.ip_lookup2.sh`: Script para consultar informações WHOIS e geolocalização de IPs fornecidos como parâmetro.
-- Outros scripts (futuros) serão organizados conforme roadmap.
-
----
-
 ## Pré-requisitos
 
 - Sistema Debian ou derivado (Ubuntu, etc).
