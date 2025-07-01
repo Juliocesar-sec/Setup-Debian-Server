@@ -157,3 +157,5 @@ echo ""
 echo \-e "Para parar e remover os containers quando terminar, execute no diretório '</span>{PROJECT_DIR}':"
 echo -e "<span class="math-inline">\{YELLOW\}docker\-compose down</span>{NC}"
 echo ""
+
+##SE DER ERRO ALTERE O nano docker-compose.yml ( - ./Debian-server-:/Debian-erver-project)
