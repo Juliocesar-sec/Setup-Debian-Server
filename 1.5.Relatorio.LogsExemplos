@@ -1,0 +1,63 @@
+# 🛡️ Relatório de Logs de Segurança
+**Data:** 06/07/2025  
+**Servidor:** `debian`  
+**Usuário:** `user`
+
+---
+
+## 📁 1. Suricata
+
+### 1.1 Últimos Alertas (`eve.json`)
+```bash
+sudo jq '. | select(.event_type=="alert")' /var/log/suricata/eve.json | tail -n 10
+
+Exemplo de saída:
+
+{
+  "timestamp": "2025-07-06T12:20:34.000000+0000",
+  "event_type": "alert",
+  "src_ip": "192.168.1.5",
+  "dest_ip": "192.168.1.100",
+  "alert": {
+    "signature": "ET SCAN Potential SSH Scan",
+    "severity": 3
+  }
+}
+
+1.2 Logs rápidos (fast.log)
+
+sudo tail -n 10 /var/log/suricata/fast.log
+
+🌐 2. Squid Proxy
+2.1 Últimos acessos
+
+sudo tail -n 10 /var/log/squid/access.log
+
+Formato típico:
+
+Timestamp   Duration   IP_Origem     Código/Status  Bytes  Método  URL
+
+Exemplo:
+
+1657095600.123    100 192.168.1.2 TCP_MISS/200 5120 GET http://example.com/
+
+2.2 Top 5 IPs que mais acessaram
+
+sudo awk '{print $3}' /var/log/squid/access.log | sort | uniq -c | sort -nr | head -n 5
+
+🔥 3. IPTables
+3.1 Regras com log (LOG)
+
+sudo iptables -L -n -v --line-numbers | grep LOG
+
+3.2 Últimos pacotes logados
+
+sudo journalctl -k | grep IPTables | tail -n 10
+
+Exemplo:
+
+Jul 06 12:23:45 debian kernel: IPTables-Dropped: IN=eth0 OUT= MAC=... SRC=192.168.1.55 DST=192.168.1.100 ...
+
+3.3 Regras DROP com contadores
+
+sudo iptables -L INPUT -n -v --line-numbers | grep DROP
